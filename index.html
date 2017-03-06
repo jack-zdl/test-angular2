@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <base href="/">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>angular2</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+ <!--  <script src="https://unpkg.com/core-js/client/shim.min.js"></script>  -->
+<!-- <script type="text/javascript" src="node_modules/es6-shim/es6-sham.js"></script> --><!-- it is for old browser,for example ,let IE browser support ES6-->
+<!-- <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+ --><!-- 跨浏览器的一些基本的标准化 -->
+<!-- <script src="node_modules/systemjs/dist/system.src.js"></script>
+SystemJS是一个模块加载器。它帮助我们创建模块和解决模块之间依赖
+<script src="node_modules/rxjs/bundles/Rx.js"></script> -->
+<!-- RxJS是一个库用于在Javascript中进行反应式编程，一般来说,RxJS给了我们使用Observables的工具，用于发出的数据流。Angular 在许多地方使用了Observables，如在处理异步代码(例如: HTTP请求) -->
+<!-- <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+<script type="text/javascript" src="app/main.js"></script> -->
+
+
+<!-- 必须引进的插件-->
+   <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+
+    <script src="https://unpkg.com/zone.js@0.6.25?main=browser"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.8"></script>
+    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+
+    <script src="https://cdn.rawgit.com/angular/angular.io/b3c65a9/public/docs/_examples/_boilerplate/systemjs.config.web.js"></script>
+    
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+</head>
+<body>
+    <my-app>Loading...</my-app>
+
+</body>
+</html>

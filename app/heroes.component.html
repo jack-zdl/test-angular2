@@ -1,0 +1,25 @@
+<!-- /**
+ * heroes.component.html
+ * @authors zhangdelei (zhangdelei@bsgchina.com)
+ * @date    2016-12-22 15:11:26
+ * @version $1.1.7$
+ */ -->
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<!-- <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+英雄的名字全被显示成大写字母。那是uppercase管道的效果，借助它，我们能干预插值表达式绑定的过程。可以管道操作符 ( | ) 后面看到它。
+管道擅长做下列工作：格式化字符串、金额、日期和其它显示数据
+-->
+<div *ngIf="selectedHero">
+  <h2>
+    {{selectedHero.name | uppercase}} is my hero
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

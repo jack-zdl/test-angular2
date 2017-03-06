@@ -1,0 +1,28 @@
+<!--/**
+ * hero-detail.component.html
+ * @authors zhangdelei (zhangdelei@bsgchina.com)
+ * @date    2016-12-22 15:04:59
+ * @version $1.1.7$
+ */
+-->
+  <div *ngIf="hero">
+      <h2>{{hero.name}} details!</h2>
+      <div>
+        <label>id: </label>{{hero.id}}
+      </div>
+      <div>
+        <label>name: </label>
+        <input [(ngModel)]="hero.name" placeholder="name"/>
+      </div>
+        <button (click)="goBack()">Back</button>
+    </div>
+ <!-- <div *ngIf="hero">
+  <h2>{{hero.name}} details!</h2>
+  <div>
+    <label>id: </label>{{hero.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="hero.name" placeholder="name" />
+  </div>
+  <button (click)="goBack()">Back</button>
+</div> -->
